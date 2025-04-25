@@ -1,33 +1,121 @@
-/* Establecer el tamaño de las imágenes del carrusel */
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el navbar */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #495057;
+    font-weight: 500;
+    padding: 12px 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-brand img {
+    height: 45px;
+}
+
+/* Carrusel */
 .carousel-inner img {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 480px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarla */
+    max-height: 400px; /* Ajusta la altura máxima de las imágenes */
+    object-fit: cover; /* Mantiene la proporción sin distorsionar */
+    width: 100%; /* Asegura que las imágenes cubran todo el ancho */
 }
 
-/* Contenedor del banner principal */
-.banner-container {
-    position: relative; /* Posicionar elementos de forma absoluta */
-    height: 480px; /* Altura del banner */
-    overflow: hidden; /* Oculta el contenido que se desborde */
-    margin-top: 0px; /* Para que el banner esté pegado arriba */
+/* Tarjetas personalizadas */
+.custom-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Imagen de fondo */
-.banner-container img {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    height: 100%; /* Imagen ocupa todo el alto */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    filter: brightness(0.7); /* Oscurece un poco la imagen para que el texto resalte */
+.custom-card:hover {
+    transform: scale(1.05);
 }
 
-/* Texto centrado en banner */
-.banner-text {
-    position: absolute; /* Se posiciona encima de la imagen */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste exacto al centro */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centrado horizontal del texto */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8); /* Sombra para mejor lectura */
+.custom-card h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.custom-card p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.custom-card .btn {
+    margin-top: 15px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Estilos de la sección de Niveles Académicos */
+h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007bff;
+    text-align: center;
+}
+
+.fs-5 {
+    font-size: 1.25rem;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+}
+
+footer .container p {
+    margin: 0;
+}
+
+/* Estilo de las tarjetas en las actividades extraescolares */
+.row.g-4 {
+    gap: 30px;
+}
+
+.row.g-4 .col-md-4 {
+    flex: 1;
+}
+
+/* Estilos de botones */
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Estilo para los íconos */
+.fas {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.fas:hover {
+    color: #0056b3;
 }

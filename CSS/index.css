@@ -1,127 +1,73 @@
-/* Estilo global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilo para el navbar */
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dee2e6;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-    color: #495057;
-    font-weight: 500;
-    padding: 12px 20px;
-}
-
-.navbar .navbar-nav .nav-item .nav-link:hover {
-    color: #007bff;
-}
-
-.navbar-brand img {
-    height: 45px;
-}
-
-/* Carrusel */
-.carousel-inner {
+/* Carrusel: todas las imágenes del mismo tamaño */
+#carouselExample .carousel-inner {
+    height: 400px; /* Puedes ajustar la altura a tu preferencia */
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  
+  #carouselExample .carousel-item img {
     width: 100%;
-    height: 500px; /* Ajusta la altura fija del carrusel */
-    overflow: hidden; /* Oculta cualquier parte fuera del contenedor */
-}
-
-.carousel-inner img {
-    object-fit: cover; /* Mantiene la proporción sin distorsionar */
-    width: 100%; /* Asegura que las imágenes cubran todo el ancho */
-    height: 100%; /* Asegura que las imágenes cubran toda la altura */
-}
-
-/* Tarjetas personalizadas */
-.custom-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.custom-card:hover {
-    transform: scale(1.05);
-}
-
-.custom-card h5 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-}
-
-.custom-card p {
-    font-size: 1rem;
-    color: #6c757d;
-}
-
-.custom-card .btn {
-    margin-top: 15px;
-}
-
-/* Contenedor principal */
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Estilos de la sección de Niveles Académicos */
-h3 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #007bff;
-    text-align: center;
-}
-
-.fs-5 {
-    font-size: 1.25rem;
-}
-
-/* Estilo del footer */
-footer {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 20px;
-}
-
-footer .container p {
-    margin: 0;
-}
-
-/* Estilo de las tarjetas en las actividades extraescolares */
-.row.g-4 {
-    gap: 30px;
-}
-
-.row.g-4 .col-md-4 {
-    flex: 1;
-}
-
-/* Estilos de botones */
-.btn-info {
-    background-color: #17a2b8;
-    color: white;
+    height: 100%;
+    object-fit: cover;      /* Recorta y rellena el espacio sin deformar la imagen */
+    object-position: center;
+    display: block;
+    background: #e9ecef;   /* Color de fondo por si la imagen no carga */
+    transition: transform 0.3s;
+  }
+  
+  #carouselExample .carousel-item img:hover {
+    transform: scale(1.03); /* Efecto leve al pasar el mouse, opcional */
+  }
+  
+  /* Opcional: ajusta los controles del carrusel si lo deseas */
+  #carouselExample .carousel-control-prev,
+  #carouselExample .carousel-control-next {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  }
+  
+  /* Opcional: mejora la visibilidad de los indicadores */
+  #carouselExample .carousel-indicators [data-bs-target] {
+    background-color: #0d6efd;
+    opacity: 0.7;
+  }
+  
+  #carouselExample .carousel-indicators .active {
+    opacity: 1;
+  }
+  
+  /* Tarjetas personalizadas */
+  .custom-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px 20px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s;
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0 6px 24px rgba(13,110,253,0.08);
+  }
+  
+  /* Botones personalizados */
+  .btn-info {
+    background-color: #0d6efd;
     border: none;
-}
-
-.btn-info:hover {
-    background-color: #138496;
-}
-
-/* Estilo para los íconos */
-.fas {
-    margin-right: 8px;
-    color: #007bff;
-}
-
-.fas:hover {
-    color: #0056b3;
-}
+    color: #fff;
+    transition: background 0.2s;
+  }
+  
+  .btn-info:hover {
+    background-color: #0b5ed7;
+    color: #fff;
+  }
+  
+  /* Responsive: carrusel más bajo en móviles */
+  @media (max-width: 768px) {
+    #carouselExample .carousel-inner {
+      height: 220px;
+    }
+  }
+  

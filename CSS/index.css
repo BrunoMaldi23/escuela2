@@ -27,10 +27,15 @@ body {
 }
 
 /* Carrusel */
+.carousel-inner {
+    width: 100%;
+    height: 500px; /* Ajusta la altura fija del carrusel */
+}
+
 .carousel-inner img {
-    max-height: 400px; /* Ajusta la altura máxima de las imágenes */
     object-fit: cover; /* Mantiene la proporción sin distorsionar */
     width: 100%; /* Asegura que las imágenes cubran todo el ancho */
+    height: 100%; /* Asegura que las imágenes cubran toda la altura */
 }
 
 /* Tarjetas personalizadas */

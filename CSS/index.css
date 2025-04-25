@@ -29,7 +29,7 @@ body {
 /* Carrusel */
 .carousel-inner {
     width: 100%;
-    height: 500px; /* Altura fija */
+    height: 500px; /* Ajusta la altura fija del carrusel */
     overflow: hidden; /* Oculta cualquier parte fuera del contenedor */
 }
 

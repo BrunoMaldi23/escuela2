@@ -1,126 +1,153 @@
-/* Estilo global */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-/* Estilo para el navbar */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Navbar Styles */
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dee2e6;
+    background-color: #ffffff !important;
+    padding: 1rem 0;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
-.navbar .navbar-nav .nav-item .nav-link {
-    color: #495057;
-    font-weight: 500;
-    padding: 12px 20px;
-}
-
-.navbar .navbar-nav .nav-item .nav-link:hover {
-    color: #007bff;
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand img {
     height: 45px;
 }
 
-/* Carrusel */
-.carousel-inner {
-    width: 100%;
-    height: 500px; /* Ajusta la altura fija del carrusel */
-}
-
-.carousel-inner img {
-    object-fit: cover; /* Mantiene la proporción sin distorsionar */
-    width: 100%; /* Asegura que las imágenes cubran todo el ancho */
-    height: 100%; /* Asegura que las imágenes cubran toda la altura */
-}
-
-/* Tarjetas personalizadas */
-.custom-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.custom-card:hover {
-    transform: scale(1.05);
-}
-
-.custom-card h5 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-}
-
-.custom-card p {
-    font-size: 1rem;
-    color: #6c757d;
-}
-
-.custom-card .btn {
-    margin-top: 15px;
-}
-
-/* Contenedor principal */
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-/* Estilos de la sección de Niveles Académicos */
-h3 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.navbar-brand span {
+    margin-left: 0.5rem;
+    font-weight: bold;
     color: #007bff;
-    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-nav .active>.nav-link {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Carousel Styles */
+#carouselExample {
+    margin-top: 1rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Institution Description Styles */
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
 }
 
 .fs-5 {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
 }
 
-/* Estilo del footer */
-footer {
-    background-color: #343a40;
-    color: #ffffff;
+/* Academic Levels & Mission/Vision Styles */
+.custom-card {
+    border: 1px solid #ddd;
     padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
 }
 
-footer .container p {
-    margin: 0;
+.custom-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo de las tarjetas en las actividades extraescolares */
-.row.g-4 {
-    gap: 30px;
+.custom-card h5 {
+    color: #007bff;
+    margin-bottom: 0.75rem;
 }
 
-.row.g-4 .col-md-4 {
-    flex: 1;
-}
-
-/* Estilos de botones */
+/* Extraescolares Activities Styles */
 .btn-info {
+    color: #fff;
     background-color: #17a2b8;
-    color: white;
-    border: none;
+    border-color: #17a2b8;
 }
 
 .btn-info:hover {
     background-color: #138496;
+    border-color: #138496;
 }
 
-/* Estilo para los íconos */
-.fas {
-    margin-right: 8px;
-    color: #007bff;
+/* Footer Styles */
+.bg-dark {
+    background-color: #343a40 !important;
 }
 
-.fas:hover {
-    color: #0056b3;
+footer {
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }

@@ -1,73 +1,74 @@
-/* Carrusel: todas las imágenes del mismo tamaño */
-#carouselExample .carousel-inner {
-    height: 400px; /* Puedes ajustar la altura a tu preferencia */
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 12px; /* Opcional: bordes redondeados */
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  }
-  
-  #carouselExample .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* Recorta y rellena el espacio sin deformar la imagen */
-    object-position: center;
-    display: block;
-    background: #e9ecef;   /* Color de fondo por si la imagen no carga */
-    transition: transform 0.3s;
-  }
-  
-  #carouselExample .carousel-item img:hover {
-    transform: scale(1.03); /* Efecto leve al pasar el mouse, opcional */
-  }
-  
-  /* Opcional: ajusta los controles del carrusel si lo deseas */
-  #carouselExample .carousel-control-prev,
-  #carouselExample .carousel-control-next {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-  }
-  
-  /* Opcional: mejora la visibilidad de los indicadores */
-  #carouselExample .carousel-indicators [data-bs-target] {
-    background-color: #0d6efd;
-    opacity: 0.7;
-  }
-  
-  #carouselExample .carousel-indicators .active {
-    opacity: 1;
-  }
-  
-  /* Tarjetas personalizadas */
-  .custom-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 24px 20px;
-    margin-bottom: 16px;
-    transition: box-shadow 0.2s;
-  }
-  
-  .custom-card:hover {
-    box-shadow: 0 6px 24px rgba(13,110,253,0.08);
-  }
-  
-  /* Botones personalizados */
-  .btn-info {
-    background-color: #0d6efd;
-    border: none;
-    color: #fff;
-    transition: background 0.2s;
-  }
-  
-  .btn-info:hover {
-    background-color: #0b5ed7;
-    color: #fff;
-  }
-  
-  /* Responsive: carrusel más bajo en móviles */
-  @media (max-width: 768px) {
-    #carouselExample .carousel-inner {
-      height: 220px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px; /* Limit the width of the container */
+    margin: auto; /* Center the container */
+}
+
+/* Navbar Styles */
+.navbar {
+    border-bottom: 1px solid #e0e0e0; /* Subtle border for navbar */
+}
+
+.navbar-brand img {
+    height: 45px; /* Logo height */
+}
+
+.nav-link {
+    color: #007bff; /* Primary link color */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Darker shade on hover */
+}
+
+/* Carousel Styles */
+.carousel-inner img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+}
+
+.carousel-item {
+    height: 400px; /* Set a fixed height for the carousel items */
+}
+
+/* Custom Card Styles */
+.custom-card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth scaling on hover */
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding for footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Center nav items on smaller screens */
     }
-  }
-  
+
+    .custom-card {
+        margin-bottom: 20px; /* Space between cards on small screens */
+    }
+}
